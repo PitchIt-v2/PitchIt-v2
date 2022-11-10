@@ -56,8 +56,8 @@ userController.createUser = (req, res, next) => {
 };
 
 userController.deleteUser = (req, res, next) => {
-  const { user_id } = req.body;
-  const queryStr = `DELETE FROM users WHERE users.id = '${user_id}'`;
+  const { username } = req.body;
+  const queryStr = `DELETE FROM users WHERE users.username = '${username}'`;
   db.query(queryStr)
     .then(() => {
       return res.status(200).json(true);
