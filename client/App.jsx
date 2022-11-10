@@ -16,40 +16,19 @@ import LoginTwo from './pages/LoginTwo.jsx';
 // ONLY USE ROUTES
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={<LoginTwo />}
-        ></Route>
-        <Route
-          path="/signup"
-          element={<SignUp />}
-        ></Route>
-        <Route element={<SidebarLayout />}>
-          <Route
-            path="/home"
-            element={<Home />}
-          ></Route>
-          <Route
-            path="/MyProjects"
-            element={<MyProjects />}
-          ></Route>
-          <Route
-            path="/Favorites"
-            element={<Favorites />}
-          ></Route>
-          <Route
-            path="/create"
-            element={<Create />}
-          ></Route>
-        </Route>
-        <Route
-          path="*"
-          element={<Error />}
-        ></Route>
-      </Routes>
-    </BrowserRouter>
+    // <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<LoginTwo />}></Route>
+      <Route path='/signup' element={<SignUp />}></Route>
+      <Route element={<SidebarLayout />}>
+        <Route path='/home' element={<Home />}></Route>
+        <Route path='/MyProjects' element={<MyProjects />}></Route>
+        <Route path='/Favorites' element={<Favorites />}></Route>
+        <Route path='/create' element={<Create />}></Route>
+      </Route>
+      <Route path='*' element={<Error />}></Route>
+    </Routes>
+    // </BrowserRouter>
   );
 };
 
